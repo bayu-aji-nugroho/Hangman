@@ -1,7 +1,6 @@
-from abc import ABC
+from proses.proses import Proses
 
-
-class abs(ABC):
+class Input(Proses):
     pastdata = [] #keperluan kata berulang
     outputData = [] #data yang akan dikeluarkan
     def __init__(self, input,jawaban:str) -> None:
@@ -9,6 +8,9 @@ class abs(ABC):
         self.Jawaban = jawaban.split() #jawaban dalam bentuk list
         for i in range(len(self.Jawaban)):
             self.outputData.append(" ") #akan menambahkan " " di setiap kata
+        
+    
+                
         
         
     def __cekdata(self):
@@ -42,17 +44,8 @@ class abs(ABC):
             return kalah()
             
         
-
-class Input(abs):
-    def __init__(self, input, jawaban: str) -> None:
-        super().__init__(input, jawaban)
         
 
-class Output(abs):
-    def __init__(self, input, jawaban: str) -> None:
-        super().__init__(input, jawaban)
-        
-        
         
     
             

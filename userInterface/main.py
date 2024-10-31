@@ -1,11 +1,13 @@
-from inputOutput.main import Output
+
+
 import os
 
-class UI(Output):
+class UI():
+
     def __init__(self,index) -> None:
         self.__Index = index
     
-    def __image(self):
+    def image(self):
         if(self.__Index == 0):
             print("-------|")
             print("       |")
@@ -51,3 +53,11 @@ class UI(Output):
             
     def generateGame(self):
         os.system("cls")
+
+
+for i in range(7):
+    inter = UI(i)
+    inter.generateGame()
+    inter.image()
+    input()
+

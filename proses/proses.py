@@ -1,7 +1,8 @@
 import random as rd
 
-class proses():
+class Proses():
     finalData = []
+    wrongpoint = 0
     vocab_list = [
     "Ability", "Absent", "Achieve", "Adventure", "Ambition", "Ancient", "Approve", "Arrange", "Atmosphere", "Balance",
     "Behavior", "Benefit", "Biology", "Border", "Bright", "Campaign", "Capable", "Celebrate", "Challenge", "Character",
@@ -18,6 +19,7 @@ class proses():
     
     def __init__(self) -> None:
         self .__rand()
+
     def __rand(self):
         self.temporarydata = []
         while True:
@@ -26,6 +28,7 @@ class proses():
                 self.temporarydata.append(self.nomer)
                 self.finalData.append(self.vocab_list[self.nomer])
                 break
+    
             
 
 Proses = proses()
